@@ -1,0 +1,343 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "16093fcc-64f5-4599-876c-2fe4472feecb",
+   "metadata": {},
+   "source": [
+    "List and Loops practice"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "fa682bff-e42d-4e53-9bf7-6b9ffaa2902a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ages = [45, 23, 16, 34, 64, 28, 42, 31, 27, 38, 17, 52, 29, 44, 33, 15, 61, 36, 18, 41]\n",
+    "\n",
+    "occupations = ['farmer', 'servant', 'laborer', 'merchant', 'farmer', 'servant', 'teacher', 'farmer', 'laborer', 'merchant', 'servant', 'farmer', 'laborer', 'blacksmith', 'carpenter', 'servant', 'farmer', 'weaver', 'servant', 'carpenter']\n",
+    "\n",
+    "birth_places = ['Ireland', 'Ireland', 'New York', 'England', 'Ireland', 'Germany', 'New York', 'Ireland', 'Ireland', 'Scotland', 'Ireland', 'England', 'Ireland', 'Wales', 'Ireland', 'Ireland', 'Scotland', 'Ireland', 'Germany', 'Ireland']\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "b6b32a54-6b62-4c55-bde1-22ceb399a550",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Counter({'farmer': 5,\n",
+       "         'servant': 5,\n",
+       "         'laborer': 3,\n",
+       "         'merchant': 2,\n",
+       "         'carpenter': 2,\n",
+       "         'teacher': 1,\n",
+       "         'blacksmith': 1,\n",
+       "         'weaver': 1})"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "from collections import Counter\n",
+    "Counter(occupations)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "4a7938a1-bf54-49aa-b246-6b7adb97ed71",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Person #0: Ireland\n",
+      "Person #1: Ireland\n",
+      "Person #2: New York\n",
+      "Person #3: England\n",
+      "Person #4: Ireland\n",
+      "Person #5: Germany\n",
+      "Person #6: New York\n",
+      "Person #7: Ireland\n",
+      "Person #8: Ireland\n",
+      "Person #9: Scotland\n",
+      "Person #10: Ireland\n",
+      "Person #11: England\n",
+      "Person #12: Ireland\n",
+      "Person #13: Wales\n",
+      "Person #14: Ireland\n",
+      "Person #15: Ireland\n",
+      "Person #16: Scotland\n",
+      "Person #17: Ireland\n",
+      "Person #18: Germany\n",
+      "Person #19: Ireland\n"
+     ]
+    }
+   ],
+   "source": [
+    "for number, occupation in enumerate(birth_places):\n",
+    "    print(f\"Person #{number}: {occupation}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "af2f817f-6bdc-4ce8-b10a-bea2c1f9d644",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['farmer', 'servant', 'laborer', 'merchant', 'farmer']"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "occupations [0:5]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "71dd2bb9-86f0-4bc7-ab8b-003e73d444a5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from collections import"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "c228d5ba-397f-405a-9bfd-8e69feb77129",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'farmer' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[14], line 1\u001b[0m\n\u001b[1;32m----> 1\u001b[0m Counter (farmer)\n",
+      "\u001b[1;31mNameError\u001b[0m: name 'farmer' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "Counter (farmer)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "aa5ebf82-65b2-4ad2-941f-d15be2b61d8c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Person #0: farmer\n",
+      "Person #1: servant\n",
+      "Person #2: laborer\n",
+      "Person #3: merchant\n",
+      "Person #4: farmer\n",
+      "Person #5: servant\n",
+      "Person #6: teacher\n",
+      "Person #7: farmer\n",
+      "Person #8: laborer\n",
+      "Person #9: merchant\n",
+      "Person #10: servant\n",
+      "Person #11: farmer\n",
+      "Person #12: laborer\n",
+      "Person #13: blacksmith\n",
+      "Person #14: carpenter\n",
+      "Person #15: servant\n",
+      "Person #16: farmer\n",
+      "Person #17: weaver\n",
+      "Person #18: servant\n",
+      "Person #19: carpenter\n"
+     ]
+    }
+   ],
+   "source": [
+    "for number, occupation in enumerate(occupations):\n",
+    "    print(f\"Person #{number}: {occupation}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "cf687c1c-233d-4e0e-9689-6d2414bd60b7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Person #0: 45\n",
+      "Person #1: 23\n",
+      "Person #2: 16\n",
+      "Person #3: 34\n",
+      "Person #4: 64\n",
+      "Person #5: 28\n",
+      "Person #6: 42\n",
+      "Person #7: 31\n",
+      "Person #8: 27\n",
+      "Person #9: 38\n",
+      "Person #10: 17\n",
+      "Person #11: 52\n",
+      "Person #12: 29\n",
+      "Person #13: 44\n",
+      "Person #14: 33\n",
+      "Person #15: 15\n",
+      "Person #16: 61\n",
+      "Person #17: 36\n",
+      "Person #18: 18\n",
+      "Person #19: 41\n"
+     ]
+    }
+   ],
+   "source": [
+    "for number, occupation in enumerate(ages):\n",
+    "    print(f\"Person #{number}: {occupation}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b7044efe-bc3b-4ce5-ae9d-717798f5de29",
+   "metadata": {},
+   "source": [
+    "Creating New List"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "c4f31ba8-5d9c-4548-992d-f952b9d49fef",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Number of skilled laborers: 4\n"
+     ]
+    }
+   ],
+   "source": [
+    "skilled_laborers = []\n",
+    "for occupation in occupations:\n",
+    "    if occupation == 'blacksmith' or occupation == 'carpenter' or occupation == 'weaver':\n",
+    "        skilled_laborers.append(occupation)\n",
+    "print(f\"Number of skilled laborers: {len(skilled_laborers)}\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "3b100656-fd9f-406a-b7ba-3fbb7743f389",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['blacksmith', 'carpenter', 'weaver', 'carpenter']\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(skilled_laborers)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "19280c74-c951-401d-96ce-48980ee4766e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Number people from UK: 20\n"
+     ]
+    }
+   ],
+   "source": [
+    "united_kingdom = []\n",
+    "for place in birth_places:\n",
+    "    if place == 'Ireland' or place == 'England' or place == 'Wales':\n",
+    "        united_kingdom.append(place)\n",
+    "print(f\"Number people from UK: {len(birth_places)}\")\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "d7e62c85-9cfb-4d30-9f82-25ddeb97fa51",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[23, 16, 28, 27, 17, 29, 15, 18]\n"
+     ]
+    }
+   ],
+   "source": [
+    "youths= []\n",
+    "for person in ages:\n",
+    "    if person<30:\n",
+    "        youths.append(person)\n",
+    "print (youths)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d49260a1-237e-4c40-bbfa-beac0c652e28",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
